@@ -8,9 +8,19 @@ Utilizzare gli input presenti nella pagina per permettere all’utente di aggiun
 
 
  */
+// preso il valore  del container dall'html
 const container = document.querySelector(".team-container");
 console.log(container);
-const newMemberArr = [
+
+// presi gli id in cui stampare
+const newName = document.getElementById("name");
+const role = document.getElementById("role");
+const image = document.getElementById("image");
+
+
+console.log(newName);
+// array dei membri come lo screenshot
+const memberArr = [
     {
         name: "Wayne Barnett",
         role: "Founder & CEO",
@@ -43,84 +53,83 @@ const newMemberArr = [
     }
 ]
 
-console.log(newMemberArr);
-
+// stampo gli array nell'html
 container.innerHTML = `
 <div class="team-card">
     <div class="card-image">
       <img
-        src="${newMemberArr[0].image}"
+        src="${memberArr[0].image}"
         alt="Wayne Barnett"
       />
     </div>
     <div class="card-text">
-      <h3>${newMemberArr[0].name}</h3>
-      <p>${newMemberArr[0].role}</p>
+      <h3>${memberArr[0].name}</h3>
+      <p>${memberArr[0].role}</p>
     </div>
 </div>
 
 <div class="team-card">
     <div class="card-image">
       <img
-        src="${newMemberArr[1].image}"
+        src="${memberArr[1].image}"
         alt="Angela Caroll"
       />
     </div>
     <div class="card-text">
-      <h3>${newMemberArr[1].name}</h3>
-      <p>${newMemberArr[1].role}</p>
+      <h3>${memberArr[1].name}</h3>
+      <p>${memberArr[1].role}</p>
     </div>
 </div>
 
 <div class="team-card">
     <div class="card-image">
       <img
-        src="${newMemberArr[2].image}"
+        src="${memberArr[2].image}"
         alt="Angela Caroll"
       />
     </div>
     <div class="card-text">
-      <h3>${newMemberArr[2].name}</h3>
-      <p>${newMemberArr[2].role}</p>
+      <h3>${memberArr[2].name}</h3>
+      <p>${memberArr[2].role}</p>
     </div>
 </div>
 
 <div class="team-card">
     <div class="card-image">
       <img
-        src="${newMemberArr[3].image}"
+        src="${memberArr[3].image}"
         alt="Angela Caroll"
       />
     </div>
     <div class="card-text">
-      <h3>${newMemberArr[3].name}</h3>
-      <p>${newMemberArr[3].role}</p>
+      <h3>${memberArr[3].name}</h3>
+      <p>${memberArr[3].role}</p>
     </div>
 </div>
 
 <div class="team-card">
     <div class="card-image">
       <img
-        src="${newMemberArr[4].image}"
+        src="${memberArr[4].image}"
         alt="Angela Caroll"
       />
     </div>
     <div class="card-text">
-      <h3>${newMemberArr[4].name}</h3>
-      <p>${newMemberArr[4].role}</p>
+      <h3>${memberArr[4].name}</h3>
+      <p>${memberArr[4].role}</p>
     </div>
 </div>
 
 <div class="team-card">
     <div class="card-image">
       <img
-        src="${newMemberArr[5].image}"
+        src="${memberArr[5].image}"
         alt="Angela Caroll"
       />
     </div>
     <div class="card-text">
-      <h3>${newMemberArr[5].name}</h3>
-      <p>${newMemberArr[5].role}</p>
+      <h3>${memberArr[5].name}</h3>
+      <p>${memberArr[5].role}</p>
     </div>
 </div>
 `
