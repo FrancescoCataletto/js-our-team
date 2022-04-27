@@ -8,3 +8,47 @@ Utilizzare gli input presenti nella pagina per permettere all’utente di aggiun
 
 
  */
+const container = document.querySelector(".team-container");
+console.log(container);
+const newMemberArr = [
+    {
+        name: "Wayne Barnett",
+        role: "Founder & CEO",
+        image: "img/wayne-barnett-founder-ceo.jpg"
+    },
+    {
+        name: "Angela Caroll",
+        role: "Chief Editor",
+        image: "img/angela-caroll-chief-editor.jpg"
+    }
+]
+
+console.log(newMemberArr);
+
+container.innerHTML = `
+<div class="team-card">
+    <div class="card-image">
+      <img
+        src="${newMemberArr[0].image}"
+        alt="Wayne Barnett"
+      />
+    </div>
+    <div class="card-text">
+      <h3>${newMemberArr[0].name}</h3>
+      <p>${newMemberArr[0].role}</p>
+    </div>
+</div>
+
+<div class="team-card">
+    <div class="card-image">
+      <img
+        src="${newMemberArr[1].image}"
+        alt="Angela Caroll"
+      />
+    </div>
+    <div class="card-text">
+      <h3>${newMemberArr[1].name}</h3>
+      <p>${newMemberArr[1].role}</p>
+    </div>
+</div>
+`
