@@ -20,6 +20,26 @@ const newMemberArr = [
         name: "Angela Caroll",
         role: "Chief Editor",
         image: "img/angela-caroll-chief-editor.jpg"
+    },
+    {
+        name: "Angela Lopez",
+        role: "Social Media Manager",
+        image: "img/angela-lopez-social-media-manager.jpg"
+    },
+    {
+        name: "Barbara Ramos",
+        role: "Graphic Designer",
+        image: "img/barbara-ramos-graphic-designer.jpg"
+    },
+    {
+        name: "Scott Estrada",
+        role: "Developer",
+        image: "img/scott-estrada-developer.jpg"
+    },
+    {
+        name: "Walter Gordon",
+        role: "Office Manager",
+        image: "img/walter-gordon-office-manager.jpg"
     }
 ]
 
@@ -49,6 +69,58 @@ container.innerHTML = `
     <div class="card-text">
       <h3>${newMemberArr[1].name}</h3>
       <p>${newMemberArr[1].role}</p>
+    </div>
+</div>
+
+<div class="team-card">
+    <div class="card-image">
+      <img
+        src="${newMemberArr[2].image}"
+        alt="Angela Caroll"
+      />
+    </div>
+    <div class="card-text">
+      <h3>${newMemberArr[2].name}</h3>
+      <p>${newMemberArr[2].role}</p>
+    </div>
+</div>
+
+<div class="team-card">
+    <div class="card-image">
+      <img
+        src="${newMemberArr[3].image}"
+        alt="Angela Caroll"
+      />
+    </div>
+    <div class="card-text">
+      <h3>${newMemberArr[3].name}</h3>
+      <p>${newMemberArr[3].role}</p>
+    </div>
+</div>
+
+<div class="team-card">
+    <div class="card-image">
+      <img
+        src="${newMemberArr[4].image}"
+        alt="Angela Caroll"
+      />
+    </div>
+    <div class="card-text">
+      <h3>${newMemberArr[4].name}</h3>
+      <p>${newMemberArr[4].role}</p>
+    </div>
+</div>
+
+<div class="team-card">
+    <div class="card-image">
+      <img
+        src="${newMemberArr[5].image}"
+        alt="Angela Caroll"
+      />
+    </div>
+    <div class="card-text">
+      <h3>${newMemberArr[5].name}</h3>
+      <p>${newMemberArr[5].role}</p>
     </div>
 </div>
 `
