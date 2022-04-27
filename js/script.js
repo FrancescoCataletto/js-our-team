@@ -12,13 +12,28 @@ Utilizzare gli input presenti nella pagina per permettere all’utente di aggiun
 const container = document.querySelector(".team-container");
 console.log(container);
 
-// presi gli id in cui stampare
-const role = document.getElementById("role");
-const image = document.getElementById("image");
-
-
 // id del bottone
 const addMemberBtn = document.getElementById("addMemberButton");
+
+addMemberBtn.addEventListener("click", function(){
+    const newName = document.getElementById("name").value;
+    const role = document.getElementById("role").value;
+    const image = document.getElementById("image").value;
+    container.innerHTML += `
+        <div class="team-card">
+            <div class="card-image">
+              <img
+                src="${image}"
+                alt="Wayne Barnett"
+              />
+            </div>
+            <div class="card-text">
+              <h3>${newName}</h3>
+              <p>${role}</p>
+            </div>
+        </div>
+        `;
+})
 
 // array dei membri come lo screenshot
 const memberArr = [
@@ -46,37 +61,33 @@ const memberArr = [
         name: "Scott Estrada",
         role: "Developer",
         image: "img/scott-estrada-developer.jpg"
-    },
-    {
-        name: "Walter Gordon",
-        role: "Office Manager",
-        image: "img/walter-gordon-office-manager.jpg"
     }
 ]
 
 // stampo gli array nell'html
-for (let i in memberArr){
-    const member = memberArr[i];
-    console.log(member);
-    container.innerHTML += `
-    <div class="team-card">
-        <div class="card-image">
-          <img
-            src="${memberArr[i].image}"
-            alt="Wayne Barnett"
-          />
+newObject();
+
+function newObject(){
+    
+    for (let i in memberArr){
+        const member = memberArr[i];
+        console.log(member);
+        container.innerHTML += `
+        <div class="team-card">
+            <div class="card-image">
+              <img
+                src="${memberArr[i].image}"
+                alt="Wayne Barnett"
+              />
+            </div>
+            <div class="card-text">
+              <h3>${memberArr[i].name}</h3>
+              <p>${memberArr[i].role}</p>
+            </div>
         </div>
-        <div class="card-text">
-          <h3>${memberArr[i].name}</h3>
-          <p>${memberArr[i].role}</p>
-        </div>
-    </div>
-    `;
+        `;
+    }
 }
 
 
 
-// addMemberBtn.addEventListener("click", function(){
-//     const newName = document.getElementById("name").value;
-//     console.log(newName);
-// })
