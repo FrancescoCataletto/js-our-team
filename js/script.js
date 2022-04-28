@@ -24,7 +24,7 @@ addMemberBtn.addEventListener("click", function(){
             <div class="card-image">
               <img
                 src="${image}"
-                alt="Wayne Barnett"
+                alt="${newName}"
               />
             </div>
             <div class="card-text">
@@ -33,6 +33,9 @@ addMemberBtn.addEventListener("click", function(){
             </div>
         </div>
         `;
+    document.getElementById("name").value = " ";
+    document.getElementById("role").value = " ";
+    document.getElementById("image").value = " ";    
 })
 
 // array dei membri come lo screenshot
@@ -77,7 +80,7 @@ function newObject(){
             <div class="card-image">
               <img
                 src="${memberArr[i].image}"
-                alt="Wayne Barnett"
+                alt="${memberArr[i].name}"
               />
             </div>
             <div class="card-text">
